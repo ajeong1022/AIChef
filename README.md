@@ -1,25 +1,27 @@
 # AI Chef
 
-AI Chef is a demo Android application that uses some simple image classification to identify vegetables and recommend recipes based on the scanned ingredients. The application was developed for the Group Project course in Part 1B of the Computer Science Tripos at the University of Cambridge. 
+AI Chef is an interactive grocery shopping assistant which suggests recipes to the users based on the ingredients that they scan using the phone's camera. Ingredient scanning is achieved by some basic image classification. The TensorFlow Lite model used for this task was created by performing transfer learning on Google's MobileNet V2 with photos of common fruits and vegetable ingredients. Currently, the application only recognizes fruits and vegetables as a starting point for suggesting recipes.    
 
-# Prerequisites
+# ARM NN (optional)
 
-The project aimed to use ARM's Compute Library and in doing so utilized the ARM NN platform. TensorFlow Lite runs on top of several abstraction layers for ARM NN, and so to fully utilize ARM NN you need to ideally use an Android smartphone with a Mali GPU or at least Cortex-A CPU's.  
+Part of this project was to investigate the usage of the ARM NN Hardware Abstraction Layer for Android, which provides an efficient way to off-load some of the machine learning computation to ARM Mali GPU's. ++ARM NN is not essential to run this application++, but if you would like to experiment with ARM NN for Android in combination with Android's NNAPI, then make sure you have the ARM NN driver installed by following the instructions at https://github.com/Arm-software/android-nn-driver.   
 
 # Installation 
 
-1. Create a RapiAPI account by subscribing to any of the plans listed at https://rapidapi.com/spoonacular/api/recipe-food-nutrition/pricing. 
+1. Create a RapiAPI account at https://rapidapi.com/spoonacular/api/recipe-food-nutrition/pricing. 
 2. Import the repository into Android Studio. 
 3. Paste your RapidAPI account key in the strings.xml file in the string element named API_KEY.  
-4. Connect an Android smartphone with USB debugging enabled and launch the application on the target device.
+4. Deploy the application to an Android device.
 
 # Usage 
 
 1. Aim the camera at a vegetable ingredient to scan. 
 2. Press and hold the scan button on the main page to begin scanning. 
 3. If scanning is successful, a dialog will appear asking for confirmation to add said ingredient to a list of scanned ingredients. 
-4. Repeat steps 1 to 3 to add several ingredients to the scanned list. 
-5. Use the slide-up panel on the main page to manage scanned ingredients and invoke the recipe API to gather recipes. 
+4. Use the slide-up panel in the main activity to manage scanned ingredients and invoke the recipe API to gather recipes. 
 
 A detailed overview of the suggested recipes can be found in the page reachable via the 'RECIPES LIST' navigation button. A cumulative shopping list of ingredients for the selected recipes is available via the 'SHOPPING LIST' navigation button in the recipe overview page. 
+
+# User Interface
+<img src="/Screenshots/Scanner.png" width="250" height="450"/> <img src="/Screenshots/SlideUpPanel.png" width="250" height="450"/>
 
