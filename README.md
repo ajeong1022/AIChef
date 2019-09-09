@@ -4,7 +4,7 @@ AI Chef is an interactive grocery shopping assistant which suggests recipes to t
 
 # ARM NN (optional)
 
-Part of this project was to investigate the usage of the ARM NN Hardware Abstraction Layer for Android, which provides an efficient way to off-load some of the machine learning computation to ARM Mali GPU's. ++ARM NN is not essential to run this application++, but if you would like to experiment with ARM NN for Android in combination with Android's NNAPI, then make sure you have the ARM NN driver installed by following the instructions at https://github.com/Arm-software/android-nn-driver.   
+Part of this project was to investigate the usage of the ARM NN Hardware Abstraction Layer for Android, which provides an efficient way to off-load some of the machine learning computation to ARM Mali GPU's. **ARM NN is not essential to run this application**, but if you would like to experiment with ARM NN for Android in combination with Android's NNAPI, then make sure you have the ARM NN driver installed by following the instructions at https://github.com/Arm-software/android-nn-driver.   
 
 # Installation 
 
